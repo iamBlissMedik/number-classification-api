@@ -17,15 +17,16 @@ export const isPerfect = (num: number): boolean => {
 };
 
 export const isArmstrong = (num: number): boolean => {
-  const digits = num.toString().split("").map(Number);
+  const digits = Math.abs(num).toString().split("").map(Number);
   const power = digits.length;
-  return digits.reduce((sum, digit) => sum + Math.pow(digit, power), 0) === num;
+  return (
+    digits.reduce((sum, digit) => sum + Math.pow(digit, power), 0) ===
+    Math.abs(num)
+  );
 };
 
 export const digitSum = (num: number): number => {
   const digits = Math.abs(num).toString().split("").map(Number);
-
   const sum = digits.reduce((acc, digit) => acc + digit, 0);
-
   return sum;
 };

@@ -23,7 +23,7 @@ export const isArmstrong = (num: number): boolean => {
 };
 
 export const digitSum = (num: number): number => {
-  return num
+  return Math.abs(num) 
     .toString()
     .split("")
     .map(Number)

@@ -1,4 +1,3 @@
-
 # Number Classification API
 
 ## Overview
@@ -82,6 +81,16 @@ This endpoint accepts a `number` query parameter and returns the following JSON 
 
 - `number` (required): A valid integer for which the mathematical properties will be classified.
 
+## Deployment
+
+The API is publicly accessible on **Render** at:
+🔗 **[https://number-classification-api-prnd.onrender.com](https://number-classification-api-prnd.onrender.com)**
+
+Example usage:
+```
+https://number-classification-api-prnd.onrender.com/api/classify-number?number=371
+```
+
 ## Development
 
 ### To run tests (if applicable):
@@ -102,10 +111,6 @@ This endpoint accepts a `number` query parameter and returns the following JSON 
 
 - **Error Handling**: Gracefully handles errors and validates inputs to ensure the API operates correctly and returns appropriate error messages.
 - **Code Structure**: The code is organized with clear separation of concerns, with functions for classification, error handling, and fetching fun facts.
-
-## Deployment
-
-- The API is deployed to a publicly accessible endpoint [Render].
 
 ## License
 

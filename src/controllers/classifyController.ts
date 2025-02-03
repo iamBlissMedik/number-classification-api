@@ -9,8 +9,11 @@ export const classifyNumber = async (
 ): Promise<void> => {
   try {
     const num = parseInt(req.query.number as string, 10);
-    if (isNaN(num))
+    if (isNaN(num)) {
       res.status(400).json({ number: req.query.number, error: true });
+      return;
+    }
+
     const classification = classify(num);
     const funFact = await getFunFact(num);
     res.json({ number: num, ...classification, fun_fact: funFact });

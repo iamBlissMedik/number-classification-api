@@ -23,9 +23,9 @@ export const isArmstrong = (num: number): boolean => {
 };
 
 export const digitSum = (num: number): number => {
-  return Math.abs(num) 
-    .toString()
-    .split("")
-    .map(Number)
-    .reduce((acc, digit) => acc + digit, 0);
+  const digits = Math.abs(num).toString().split("").map(Number);
+
+  const sum = digits.reduce((acc, digit) => acc + digit, 0);
+
+  return num < 0 ? -sum : sum;
 };

@@ -27,5 +27,5 @@ export const digitSum = (num: number): number => {
 
   const sum = digits.reduce((acc, digit) => acc + digit, 0);
 
-  return num < 0 ? -sum : sum;
+  return sum;
 };
